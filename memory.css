@@ -1,0 +1,166 @@
+.memory-container {
+  background: rgba(24,24,40,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(55,0,255,0.15);
+  padding: 40px 32px;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px auto;
+  position: relative;
+}
+
+.memory-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.memory-timer {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #00FFD0;
+  letter-spacing: 1px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-gap: 16px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.memory-card {
+  width: 90px;
+  height: 90px;
+  background: #23233b;
+  border: 2px solid #00FFD0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, transform 0.2s;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,20,0.92);
+  border-radius: 12px;
+  z-index: 1;
+  transition: opacity 0.2s;
+}
+
+.memory-card.flipped::before,
+.memory-card.matched::before {
+  opacity: 0;
+}
+
+.memory-card.flipped, .memory-card.matched {
+  background: #2dcfd0; /* мягкий голубой */
+  border: 2px solid #6C47FF;
+  transform: scale(1.05);
+}
+
+.memory-card.matched {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.memory-card img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+  position: relative;
+}
+
+.memory-result {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  min-height: 24px;
+}
+
+.memory-btn {
+  background: linear-gradient(90deg, #00FFD0 0%, #6C47FF 100%);
+  color: #181828;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.memory-btn:hover {
+  background: linear-gradient(90deg, #6C47FF 0%, #00FFD0 100%);
+}
+
+.memory-btn-small {
+  width: 140px;
+  padding: 10px 0;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.memory-back {
+  color: #00FFD0;
+  margin-top: 12px;
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.memory-end-menu {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24,24,40,0.96);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 8px 32px 0 rgba(55,0,255,0.15);
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.memory-end-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00FFD0;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.memory-end-msg {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 28px;
+  max-width: 320px;
+  text-align: center;
+}

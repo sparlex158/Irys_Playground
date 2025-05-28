@@ -1,0 +1,89 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #16e0c3 0%, #3a7bd5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.center-box {
+  background: #181929;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  padding: 48px 40px 40px 40px;
+  text-align: center;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 32px #16e0c3);
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.desc {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.main-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #16e0c3 0%, #3a7bd5 100%);
+  color: #181929;
+  text-decoration: none;
+  text-align: center;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(22,224,195,0.2);
+}
+
+.main-btn:hover {
+  background: linear-gradient(90deg, #3a7bd5 0%, #16e0c3 100%);
+  box-shadow: 0 4px 16px rgba(58,123,213,0.3);
+  color: #fff;
+}
+
+.irys-logo-start {
+  width: 110px;  
+  max-width: 30vw;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 2px 12px #00FFD0aa);
+}

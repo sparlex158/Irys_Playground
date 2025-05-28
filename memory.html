@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprite Memory</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:700,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="irys.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+  <div class="memory-container">
+    <img src="Logo.png" alt="IRYS Logo" class="irys-logo-start">
+    <div class="memory-title">Sprite Memory</div>
+    <div class="memory-timer" id="memoryTimer">Time: 40</div>
+    <div class="memory-grid" id="memoryGrid"></div>
+    <div class="memory-result" id="memoryResult"></div>
+    <!-- Финальное меню -->
+    <div class="memory-end-menu" id="memoryEndMenu" style="display:none;">
+      <div class="memory-end-title" id="memoryEndTitle"></div>
+      <div class="memory-end-msg" id="memoryEndMsg"></div>
+      <button class="memory-btn memory-btn-small" onclick="restartMemory()">Restart</button>
+      <a href="index.html" class="memory-back" style="margin-top:10px;">Back to main</a>
+    </div>
+  </div>
+  <script src="memory.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprite Snake</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:700,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="irys.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+  <div class="snake-container">
+    <img src="Logo.png" alt="IRYS Logo" class="irys-logo-start">
+    <div class="snake-title">Sprite Snake</div>
+    <div class="snake-score" id="score">Score: 0</div>
+    <canvas id="snake" width="384" height="384"></canvas>
+    <div id="gameOver" class="snake-gameover"></div>
+    <button class="snake-btn" onclick="restartGame()">Restart</button>
+    <a href="index.html" class="snake-back">Back to main</a>
+  </div>
+  <script src="snake.js"></script>
+</body>
+</html>
